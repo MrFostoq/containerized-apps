@@ -9,9 +9,9 @@ FROM tomcat:10-jdk21
 
 # Copy the built WAR file from the builder stage to Tomcat webapps
 RUN rm -rf /usr/local/tomcat/webapps/*
-COPY --from=build_image /containerized-apps/target/*.war /usr/local/tomcat/webapps/app.war
+COPY --from=build_image containerized-apps/target/vprofile-v2.war /usr/local/tomcat/webapps/ROOT.war
 
-# Expose Tomcat default port
+# Expose Tomcat defau   lt port
 EXPOSE 8080
 
 # Start Tomcat

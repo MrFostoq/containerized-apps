@@ -1,7 +1,7 @@
 # Stage 1: Build the Application 
 FROM maven:3.9.9-eclipse-temurin-21-jammy AS build_image
-RUN git clone https://github.com/hkhcoder/vprofile-project.git
-RUN cd vprofile-project && git checkout containers && mvn install
+RUN git clone https://github.com/MrFostoq/containerized-apps.git
+RUN cd containerized-apps && mvn install
 
 
 # Stage 2: Deploy to Tomcat 

@@ -1,2 +1,5 @@
 .vscode
 cloud-setup/my-key-pair
+cloud-setup/.terraform
+cloud-setup/terraform.tfstate
+cloud-setup/terraform.tfstate.backup

@@ -6,7 +6,7 @@ resource "aws_instance" "vproapp" {
   ami             = "ami-071226ecf16aa7d96" # amazon linux
   instance_type   = var.instance_type
   key_name        = aws_key_pair.my_key.key_name
-  security_groups = [ aws_security_group.vproapp.name ]
+  security_groups = [aws_security_group.vproapp.name]
 
   user_data = <<-EOF
               #!/bin/bash

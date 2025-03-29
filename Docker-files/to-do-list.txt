@@ -1,0 +1,32 @@
+Let's gather the information we need.
+from src/resources/application.properties we get 
+
+5 container
+
+db
+    Dockerfile
+    containerName : vproadb
+    ports : 3360:3360
+    password : MYSQL_ROOT_PASSWORD
+    volum : /var/lib/mysql
+app
+    Dockerfile
+    containerName : vproapp
+    ports : 8080:8080
+    volum : /usr/local/tomcat/webapps
+web
+    Dockerfile
+    containerName : vproweb
+    ports : 80:80
+mc
+    image
+    containerName : vprocache01
+    ports : 11211:11211
+RabbitMq
+    image
+    containerName : vpromq01
+    ports : 5672:5672
+    variables :
+        user : guest
+        password : guest
+

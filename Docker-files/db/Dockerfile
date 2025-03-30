@@ -6,7 +6,7 @@ ENV MYSQL_DATABASE="accounts"
 
 
 # add initialization scripts
-ADD db_backup.sql /docker-entrypoint-initdb.d/db_backup.sql
+ADD db_backup.sql docker-entrypoint-initdb.d/db_backup.sql
 
 # Expose MySQL default port
 EXPOSE 3306

@@ -1,9 +1,9 @@
 services:
-  vproappdb:
+  vprodb:
     build:
        context: ./Docker-files/db
     image: fostoq/vprofiledb
-    container_name: vproadb
+    container_name: vprodb
     ports:
       - "3306:3306"
     volumes:
